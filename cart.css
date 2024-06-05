@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    color: #2b2929;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/sectionSlide/ordina-in-app--carousel-dsk.png);
+    background-size: cover;
+}
+
+.box-carrello {
+    width: 65vw;
+    height: 60vh;
+    position: absolute;
+    left: 7vw;
+    background: #ffffff;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.griglia-carrello {
+    display: flex;
+    justify-content: space-around;
+    width: 62%;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: stretch;
+    gap: 2%;
+    overflow-y: auto;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 20px 0px 20px 0px rgba(0, 0, 0, .5);
+}
+
+.product-item {
+    box-sizing: border-box;
+    padding: 2% 0;
+    justify-content: center;
+}
+
+.product-item img {
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.info-prodotto {
+    text-align: center;
+}
+
+.info-prodotto .nome-prodotto,
+.info-prodotto .prezzo-prodotto,
+.info-prodotto .add-button {
+    padding: 2% 0;
+}
+
+.product-item span {
+    display: block;
+    text-align: center;
+}
+
+.product-item .nome-prodotto {
+    font-weight: bold;
+}
+
+.remove-button {
+    width: 6em;
+    height: 2.4em;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-color: #ffbc0d;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: medium;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-button:hover {
+    color: #ffbc0d;
+    background-color: #ffffff;
+    border: 2px solid #ffbc0d;
+    transition: all .2s ease;
+}
+
+.container-recap {
+    width: 32%;
+    height: 20vh;
+    text-align: center;
+    font-size: large;
+    padding: 1.8vh;
+}
+
+.container-add-remove {
+    display: flex;
+    justify-content: center;
+}
+
+.compra {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    background-color: #ffbc0d;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .4px;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.compra:hover {
+    color: #ffbc0d;
+    background-color: #ffffff;
+    border: 2px solid #ffbc0d;
+    transition: all .2s ease;
+}
+
+
+@media(max-width: 1280px) {
+    main {
+        background-image: url(assets/sectionSlideMobile/ordina-in-app--carousel-mob.png);
+    }
+
+    .box-carrello {
+        width: 88vw;
+        height: 70vh;
+        position: absolute;
+        background: #ffffff;
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media(max-width: 1024px) {
+    .box-carrello {
+        flex-direction: column;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
